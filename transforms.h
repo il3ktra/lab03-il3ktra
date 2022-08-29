@@ -6,8 +6,6 @@
 class Transforms
 {
 public:
-    Transforms();
-
     static glm::mat4 getMatrixA();
     static glm::mat4 getMatrixB();
     static glm::mat4 getMatrixC();

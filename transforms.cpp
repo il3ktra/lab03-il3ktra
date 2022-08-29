@@ -3,11 +3,6 @@
 #include <math.h>
 #include <iostream>
 
-Transforms::Transforms()
-{
-
-}
-
 glm::mat3 Transforms::getScalingMatrix(float sx, float sy, float sz) {
     // Task 1: return the transformation matrix for 3D scaling
     // Task 4: modify the function to return a 4x4 matrix
