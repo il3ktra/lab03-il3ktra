@@ -7,7 +7,6 @@
 
 void Axes::applyTransform(glm::mat4 transform) {
     m_model = transform * m_model;
-    std::cout << glm::to_string(m_model) << std::endl;
 }
 
 void pushVec3(glm::vec3 vec, std::vector<float> &data) {
