@@ -57,7 +57,7 @@ include_directories(${PROJECT_NAME} PRIVATE glew/include)
 # GLM: this creates its library and allows you to `#include "glm/..."`
 add_subdirectory(glm)
 
-# Specifies libraries to be linked (Qt components, glew, glm, etc)
+# Specifies libraries to be linked (Qt components, glew, etc)
 target_link_libraries(${PROJECT_NAME} PRIVATE
   Qt::Core
   Qt::Widgets
