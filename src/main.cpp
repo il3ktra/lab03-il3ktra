@@ -12,12 +12,12 @@ int main(int argc, char *argv[])
     QSurfaceFormat::setDefaultFormat(fmt);
     QApplication a(argc, argv);
 
-    QCoreApplication::setApplicationName("Qt Hello GL 2 Example");
-    QCoreApplication::setOrganizationName("QtProject");
+    QCoreApplication::setApplicationName("lab04");
+    QCoreApplication::setOrganizationName("BrownCSCI1230");
     QCoreApplication::setApplicationVersion(QT_VERSION_STR);
 
     MainWindow w;
-    //w.resize(w.sizeHint());
+    // w.resize(w.sizeHint());
     w.resize(600, 400);
     int desktopArea = QGuiApplication::primaryScreen()->size().width() *
                       QGuiApplication::primaryScreen()->size().height();

@@ -1,12 +1,10 @@
-#ifndef AXES_H
-#define AXES_H
+#pragma once
 
 #include "GL/glew.h"
 #include "glm/glm.hpp"
 #include <vector>
 
-
-//Forward Declaration of glrenderer
+// Forward Declaration of glrenderer
 class GLRenderer;
 
 class Axes
@@ -26,5 +24,3 @@ private:
     unsigned int m_arrowVbo;
     unsigned int m_arrowVao;
 };
-
-#endif // AXES_H

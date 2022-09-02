@@ -1,5 +1,4 @@
-#ifndef TRANSFORMS_H
-#define TRANSFORMS_H
+#pragma once
 
 #include "glm/glm.hpp"
 
@@ -22,5 +21,3 @@ private:
 
     static glm::mat4 getTranslationMatrix(float dx, float dy, float dz);
 };
-
-#endif // TRANSFORMS_H

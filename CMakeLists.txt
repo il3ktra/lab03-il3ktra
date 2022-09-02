@@ -19,22 +19,25 @@ find_package(Qt6 REQUIRED COMPONENTS OpenGL)
 find_package(Qt6 REQUIRED COMPONENTS OpenGLWidgets)
 find_package(Qt6 REQUIRED COMPONENTS Gui)
 
+# Allows you to include files from within those directories, without prefixing their filepaths
+include_directories(src)
+
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
-  main.cpp
+  src/main.cpp
 
-  glrenderer.cpp
-  mainwindow.cpp
-  transforms.cpp
-  axes.cpp
-  gridlines.cpp
+  src/glrenderer.cpp
+  src/mainwindow.cpp
+  src/transforms.cpp
+  src/axes.cpp
+  src/gridlines.cpp
 
-  glrenderer.h
-  mainwindow.h
-  CS1230Lib/shaderloader.h
-  transforms.h
-  axes.h
-  gridlines.h
+  src/glrenderer.h
+  src/mainwindow.h
+  src/shaderloader.h
+  src/transforms.h
+  src/axes.h
+  src/gridlines.h
 )
 
 # Specifies other files
@@ -42,12 +45,12 @@ qt_add_resources(${PROJECT_NAME} "Resources"
   PREFIX
   "/"
   FILES
-  Resources/Shaders/arrow.vert
-  Resources/Shaders/arrow.frag
-  Resources/Shaders/axes.vert
-  Resources/Shaders/axes.frag
-  Resources/Shaders/grid.vert
-  Resources/Shaders/grid.frag
+  resources/shaders/arrow.vert
+  resources/shaders/arrow.frag
+  resources/shaders/axes.vert
+  resources/shaders/axes.frag
+  resources/shaders/grid.vert
+  resources/shaders/grid.frag
 )
 
 # GLEW: this creates its library and allows you to `#include "GL/glew.h"`
@@ -65,7 +68,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   Qt::OpenGLWidgets
   Qt::Gui
   StaticGLEW
-  glm
 )
 
 # GLEW: this provides support for Windows (including 64-bit)

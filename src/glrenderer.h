@@ -1,5 +1,4 @@
-#ifndef GLRENDERER_H
-#define GLRENDERER_H
+#pragma once
 
 #include "GL/glew.h"
 #include <QOpenGLWidget>
@@ -67,5 +66,3 @@ private:
     float m_angleY;
     float m_zoom;
 };
-
-#endif // GLRENDERER_H

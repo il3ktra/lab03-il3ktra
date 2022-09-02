@@ -4,7 +4,7 @@
 #include <QWindow>
 #include <QMouseEvent>
 
-#include "CS1230Lib/shaderloader.h"
+#include "shaderloader.h"
 #include "transforms.h"
 
 GLRenderer::GLRenderer(QWidget *parent)

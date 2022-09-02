@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QPushButton>
@@ -50,4 +49,3 @@ private slots:
 
     void addTransformLabel(QString matrix);
 };
-#endif // MAINWINDOW_H

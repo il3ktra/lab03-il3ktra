@@ -1,5 +1,4 @@
-#ifndef GRIDLINES_H
-#define GRIDLINES_H
+#pragma once
 
 #include "glm/glm.hpp"
 #include <vector>
@@ -20,5 +19,3 @@ private:
     unsigned int m_vbo;
     unsigned int m_vao;
 };
-
-#endif // GRIDLINES_H
