@@ -157,6 +157,13 @@ void GLRenderer::buttonPressed(Button button) {
         case VIEW_INV:
             m_student.applyTransform(glm::inverse(Transforms::getViewMatrix(glm::vec3(1, 4, 5), glm::vec3(-2, -1, -2), glm::vec3(0, 1, 0))));
             break;
+        case ROTATION:
+            m_student.applyTransform(glm::rotate(45.f, glm::vec3(0,1,0)));
+            break;
+        case ROTATION_INV:
+            m_student.applyTransform(Transforms::getInverseRotation(glm::rotate(45.f, glm::vec3(0,1,0))));
+            break;
+
         case RESET:
             m_student.reset();
             break;
