@@ -62,7 +62,7 @@ glm::mat4 Transforms::getViewMatrix(glm::vec3 pos, glm::vec3 look, glm::vec3 up)
 // Task 7: Debug the following function
 glm::mat4 Transforms::getInverseRotation(glm::mat4 rot) {
     // We know that the inverse of a rotation matrix is simply its transpose,
-    //  so let's turn rows of the input matrix into columns of the inverse.
+    //  so let's try to turn rows of the input matrix into columns of the inverse.
     glm::vec4 col0(rot[0][0], rot[0][1], rot[0][2], rot[0][3]);
     glm::vec4 col1(rot[1][0], rot[1][1], rot[1][2], rot[1][3]);
     glm::vec4 col2(rot[2][0], rot[2][1], rot[2][2], rot[2][3]);
