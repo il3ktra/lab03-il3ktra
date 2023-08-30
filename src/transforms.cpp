@@ -53,12 +53,6 @@ glm::mat4 Transforms::getMatrixD() {
     return glm::mat4(1.f);
 }
 
-
-glm::mat4 Transforms::getViewMatrix(glm::vec3 pos, glm::vec3 look, glm::vec3 up) {
-    // Task 8: return the camera view matrix
-    return glm::mat4(1.f);
-}
-
 // Task 7: Debug the following function
 glm::mat4 Transforms::getInverseRotation(glm::mat4 rot) {
     // We know that the inverse of a rotation matrix is simply its transpose,
@@ -70,4 +64,11 @@ glm::mat4 Transforms::getInverseRotation(glm::mat4 rot) {
 
     return glm::mat4(col0, col1, col2, col3);
 }
+
+glm::mat4 Transforms::getViewMatrix(glm::vec3 pos, glm::vec3 look, glm::vec3 up) {
+    // Task 8: return the camera view matrix
+    return glm::mat4(1.f);
+}
+
+
 
