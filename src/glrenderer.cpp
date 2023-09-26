@@ -47,9 +47,9 @@ void GLRenderer::initializeGL()
 
     //load shaders
     ShaderLoader loader;
-    m_gridshader = loader.createShaderProgram("Resources/Shaders/grid.vert", "Resources/Shaders/grid.frag"); //Shader setup (DO NOT EDIT)
-    m_axesshader = loader.createShaderProgram("Resources/Shaders/axes.vert", "Resources/Shaders/axes.frag"); //Shader setup (DO NOT EDIT)
-    m_arrowshader = loader.createShaderProgram("Resources/Shaders/arrow.vert", "Resources/Shaders/arrow.frag"); //Shader setup (DO NOT EDIT)
+    m_gridshader = loader.createShaderProgram(":/resources/shaders/grid.vert", ":/resources/shaders/grid.frag"); //Shader setup (DO NOT EDIT)
+    m_axesshader = loader.createShaderProgram(":/resources/shaders/axes.vert", ":/resources/shaders/axes.frag"); //Shader setup (DO NOT EDIT)
+    m_arrowshader = loader.createShaderProgram(":/resources/shaders/arrow.vert", ":/resources/shaders/arrow.frag"); //Shader setup (DO NOT EDIT)
 
     //initialize axis objects
     m_student.init(glm::mat4(1), glm::vec3(1, 1, 1));
@@ -157,6 +157,13 @@ void GLRenderer::buttonPressed(Button button) {
         case VIEW_INV:
             m_student.applyTransform(glm::inverse(Transforms::getViewMatrix(glm::vec3(1, 4, 5), glm::vec3(-2, -1, -2), glm::vec3(0, 1, 0))));
             break;
+        case ROTATION:
+            m_student.applyTransform(glm::rotate(45.f, glm::vec3(0,1,0)));
+            break;
+        case ROTATION_INV:
+            m_student.applyTransform(Transforms::getInverseRotation(glm::rotate(45.f, glm::vec3(0,1,0))));
+            break;
+
         case RESET:
             m_student.reset();
             break;

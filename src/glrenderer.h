@@ -22,6 +22,8 @@ enum Button {
     C_INV,
     D_INV,
     VIEW_INV,
+    ROTATION,
+    ROTATION_INV,
     RESET
 };
 

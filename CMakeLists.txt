@@ -41,7 +41,7 @@ add_executable(${PROJECT_NAME}
 )
 
 # Specifies other files
-qt_add_resources(${PROJECT_NAME} "Resources"
+qt_add_resources(${PROJECT_NAME} "resources"
   PREFIX
   "/"
   FILES

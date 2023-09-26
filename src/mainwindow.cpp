@@ -39,6 +39,8 @@ MainWindow::MainWindow()
     buttonCInv = new QPushButton("C⁻¹");
     buttonDInv = new QPushButton("D⁻¹");
     buttonViewInv = new QPushButton("View⁻¹");
+    buttonRotation = new QPushButton("Rotation");
+    buttonRotationInv = new QPushButton("Rotation⁻¹");
     buttonReset = new QPushButton("Reset");
 
     gridLayout->addWidget(buttonA, 0, 0);
@@ -51,7 +53,9 @@ MainWindow::MainWindow()
     gridLayout->addWidget(buttonCInv, 2, 1);
     gridLayout->addWidget(buttonDInv, 3, 1);
     gridLayout->addWidget(buttonViewInv, 4, 1);
-    gridLayout->addWidget(buttonReset, 5, 0, 1, 2);
+    gridLayout->addWidget(buttonRotation, 5, 0);
+    gridLayout->addWidget(buttonRotationInv, 5, 1);
+    gridLayout->addWidget(buttonReset, 6, 0, 1, 2);
 
     connect(buttonA, &QPushButton::released, this, &MainWindow::pressA);
     connect(buttonB, &QPushButton::released, this, &MainWindow::pressB);
@@ -63,6 +67,8 @@ MainWindow::MainWindow()
     connect(buttonCInv, &QPushButton::released, this, &MainWindow::pressCInv);
     connect(buttonDInv, &QPushButton::released, this, &MainWindow::pressDInv);
     connect(buttonViewInv, &QPushButton::released, this, &MainWindow::pressViewInv);
+    connect(buttonRotation, &QPushButton::released, this, &MainWindow::pressRotation);
+    connect(buttonRotationInv, &QPushButton::released, this, &MainWindow::pressRotationInv);
     connect(buttonReset, &QPushButton::released, this, &MainWindow::pressReset);
 
     transformStr = "you";
@@ -72,7 +78,7 @@ MainWindow::MainWindow()
     font.setBold(true);
     transformLabel->setFont(font);
     transformLabel->setText(transformStr);
-    gridLayout->addWidget(transformLabel, 6, 0, 1, 2);
+    gridLayout->addWidget(transformLabel, 7, 0, 1, 2);
 }
 
 void MainWindow::pressA() {
@@ -124,6 +130,17 @@ void MainWindow::pressViewInv() {
     glRenderer->buttonPressed(VIEW_INV);
     this->addTransformLabel("V⁻¹");
 }
+
+void MainWindow::pressRotation() {
+    glRenderer->buttonPressed(ROTATION);
+    this->addTransformLabel("R");
+}
+
+void MainWindow::pressRotationInv() {
+    glRenderer->buttonPressed(ROTATION_INV);
+    this->addTransformLabel("R⁻¹");
+}
+
 
 void MainWindow::pressReset() {
     glRenderer->buttonPressed(RESET);

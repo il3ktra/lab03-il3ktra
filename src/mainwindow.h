@@ -28,7 +28,8 @@ private:
     QPushButton *buttonViewInv;
 
     QPushButton *buttonReset;
-
+    QPushButton *buttonRotation;
+    QPushButton *buttonRotationInv;
     QLabel *transformLabel;
     QString transformStr;
 
@@ -43,6 +44,8 @@ private slots:
     void pressBInv();
     void pressCInv();
     void pressDInv();
+    void pressRotation();
+    void pressRotationInv();
     void pressViewInv();
 
     void pressReset();
